@@ -1,0 +1,208 @@
+
+
+/* header */
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    z-index: 999;
+}
+
+
+/* logo */
+.logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.logo a{
+    font-size: 2.5em;
+    font-family: 'Redressed', cursive;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 0 20px;
+    line-height: 60px;
+}
+
+
+/*  icon box
+**  hamburger icon e animações
+*/
+.icon-box{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 133px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.hamburger{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+}
+.hamburger span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 5px;
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    transition: all .3s ease;
+}
+.hamburger span:nth-child(1){margin-top: 8px;}
+.hamburger span:nth-child(2){margin-top: 13px;}
+.hamburger span:nth-child(3){margin-top: 18px;}
+
+/*  before icon box
+**  animação/transição do efeito de icone hamburger
+**  obs: não trocar as classes de lugar
+*/
+.icon-box:hover .hamburger span::before,
+.icon-box .hamburger span::before,
+.icon-box:hover::before,
+.icon-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .4s ease-in;
+}
+.icon-box:hover::before, .icon-box::before{height: 60px;background-color: #fff;}                                /* icon box */
+.icon-box:hover .hamburger span::before, .icon-box .hamburger span::before{height: 3px;background-color: #000;} /* spans */
+.icon-box::before{width: 0;}            /* 0 */
+.icon-box:hover::before{width: 100%;}   /* 100% */
+.icon-box .hamburger span::before{width: 0;}            /* 0 */
+.icon-box:hover .hamburger span::before{width: 20px;}   /* 20px */
+
+/*  before icon x
+**  add class depois do clique
+**  transforma o hamburger em x
+*/
+.icon-x .hamburger span:nth-child(1){transform: rotate(-45deg);margin-top: 13px;}
+.icon-x .hamburger span:nth-child(2){opacity: 0;}
+.icon-x .hamburger span:nth-child(3){transform: rotate(45deg);margin-top: 13px;}
+.icon-x .hamburger span::before{width: 20px;}
+.icon-x::before{width: 100%;}
+
+
+/* btn contact */
+.btn-contact{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 112.7px;
+    height: 60px;
+}
+.btn-contact::after,
+.btn-contact::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 60px;
+    transition: all .5s ease-out;
+    z-index: -1;
+}
+.btn-contact::after{width: 100%;background-color: #000;}
+.btn-contact::before{width: 0;background-color: #fff;}
+.btn-contact:hover::after{width: 0;}
+.btn-contact:hover::before{width: 100%;}
+.btn-contact a{
+    font-family: 'Lora', serif;
+    font-size: .8em;
+    text-transform: uppercase;
+    color: #fff;
+    display: inline-block;
+    padding: 0 25px;
+    line-height: 60px;
+    z-index: 3;
+    transition: all .5s ease-in-out;
+}
+.btn-contact:hover a{
+    color: #000;
+}
+
+
+/*  menu
+**  menu closed and open
+*/
+.menu{
+    position: absolute;
+    margin-top: 60px;
+    width: 100%;
+    height: 0;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    transition: all .3s ease-out;
+}
+.opened{
+    height: calc(100vh - 60px);
+}
+
+/* main menu */
+.main-menu li a{
+    font-size: 2.5em;
+    line-height: 2em;
+    font-family: 'Syne Mono', monospace;
+    color: #727272;
+    text-transform: uppercase;
+    transition: all .3s ease-in;
+}
+.main-menu li a:hover{
+    color: #000;
+}
+
+
+/* social menu */
+.social-menu{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    margin-bottom: 70px;
+}
+.social-menu li a{
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    background-color: #727272;
+    transition: all .3s ease-out;
+}
+.social-menu li a:hover{
+    background-color: #000;
+    color: #727272;
+}
+
+
+
+/* responsive */
+/* max-width 300px */
+@media (max-width:300px){
+    .btn-contact{
+        width: auto;
+    }
+    .btn-contact a{
+        padding: 0 10px;
+    }
+}

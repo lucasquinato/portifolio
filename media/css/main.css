@@ -1,0 +1,188 @@
+
+
+/* main */
+/* welcome section */
+.welcome{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('../images/trabalhos.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+.inner-welcome{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.inner-welcome p{
+    font-size: 6em;
+    font-family: 'Righteous', cursive;
+    color: #fff;
+    cursor: default;
+}
+.discover{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.discover p{
+    margin-left: 0;
+    color: #fff;
+    font-size: 1.5em;
+    animation: arrowDown 1.5s ease-out infinite;
+}
+@keyframes arrowDown{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+
+
+
+/* about me */
+.about-me{
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+}
+.about-me .container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+.title-section{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'Syne Mono', monospace;
+    margin: 25px 0;
+}
+.desc-about{
+    position: relative;
+    max-width: 500px;
+    padding: 20px;
+    padding-left: 40px;
+    text-align: justify;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.links-me{
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000;
+    border-radius: 10px;
+    margin-right: -20px;
+    z-index: 99;
+}
+.links-me p{
+    color: #fff;
+    text-transform: uppercase;
+}
+.links-me img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+    object-fit: cover;
+    border: 1px solid #e4e4e4;
+    transition: all .3s ease-out;
+}
+.links-me img:hover{
+    transform: scale(1.3);
+}
+.links-me .social-menu{
+    position: relative;
+    margin-bottom: 0;
+    margin: 25px 0;
+}
+
+
+
+
+/* skills */
+.skills{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.skills .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+.card{
+    position: relative;
+    width: 200px;
+    margin: 20px 5%;
+    border: 1px solid #e4e4e4;
+    text-align: justify;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+.card:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.title-card{
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-html .title-card{
+    color: #ec5d22;
+}
+.card-css .title-card{
+    color: #2eaade;
+}
+.card-js .title-card{
+    color: #eec029;
+}
+
+
+
+/* responsive */
+/* max-width 685px */
+@media (max-width:685px){
+    .inner-welcome p{font-size: 4em;}
+    .discover p{font-size: 1.2em;}
+    .links-me{margin-right: 0;margin: 0 5%;}
+    .desc-about{margin: 20px 5%;padding: 10px;}
+}
+/* max-width 445px */
+@media (max-width:445px){
+    .inner-welcome p{font-size: 3em;}
+    .discover p{font-size: 1.2em;}
+}
+/* max-width 311px */
+@media (max-width:311px){
+    .inner-welcome p{font-size: 2.5em;}
+    .discover p{font-size: 1.2em;}
+    .title-section{font-size: 1.8em;}
+}
